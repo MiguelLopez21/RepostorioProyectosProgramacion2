@@ -3,7 +3,7 @@ package co.edu.uniquindio.projectfinal.finalproject.mapping.dto;
 public class AdministradorDTO extends UsuarioDTO{
     private String IdAdmin;
 
-    public AdministradorDTO(String nombre, String apellido, String cedula, String direccion, String usuario, String password,String IdAdmin) {
+    public AdministradorDTO(String nombre, String apellido, String cedula, String direccion, String usuario, String password, String administradorApellido) {
         super(nombre, apellido, cedula, direccion, usuario, password);
         this.IdAdmin = IdAdmin;
     }

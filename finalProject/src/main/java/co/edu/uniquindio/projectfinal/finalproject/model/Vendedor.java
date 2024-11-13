@@ -6,8 +6,8 @@ import java.util.List;
 public class Vendedor extends Usuario {
     private static final int MAX_CONTACTOS = 10;
     private String idVendedor;
-    private final List<Vendedor> listaContactos = new ArrayList<>();
-    private final List<Producto> listaProductos = new ArrayList<>();
+    private List<Vendedor> listaContactos = new ArrayList<>();
+    private List<Producto> listaProductos = new ArrayList<>();
     private Muro muro = new Muro();
 
     public Vendedor(String nombre, String apellido, String cedula, String direccion, String usuario, String password, String idVendedor) {
@@ -68,7 +68,13 @@ public class Vendedor extends Usuario {
         return muro;
     }
 
-    public void setMuro(Muro muro) {
-        this.muro = muro;
+    public void setMuro(Muro muro) {this.muro = muro;}
+
+    public void setListaContactos(List<Vendedor> listaContactos) {
+        this.listaContactos = listaContactos;
     }
+    public void setListaProductos(List<Producto> listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+
 }

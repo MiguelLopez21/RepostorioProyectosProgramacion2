@@ -30,19 +30,19 @@ public class VendedorDTO extends UsuarioDTO {
         this.muro = muro;
     }
 
-    public List<VendedorDTO> getListaContactos() {
+    public List<VendedorDTO> getListaContactosDto() {
         return listaContactos;
     }
 
-    public void setListaContactos(List<VendedorDTO> listaContactos) {
+    public void setListaContactosDto(List<VendedorDTO> listaContactos) {
         this.listaContactos = listaContactos;
     }
 
-    public List<ProductoDTO> getListaProductos() {
+    public List<ProductoDTO> getListaProductosDto() {
         return listaProductos;
     }
 
-    public void setListaProductos(List<ProductoDTO> listaProductos) {
+    public void setListaProductosDto(List<ProductoDTO> listaProductos) {
         this.listaProductos = listaProductos;
     }
 }

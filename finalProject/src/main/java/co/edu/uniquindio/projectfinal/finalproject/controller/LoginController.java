@@ -10,8 +10,12 @@ public class LoginController implements ILoginControllerServices {
     public LoginController() {
         modelFactory = ModelFactory.getInstance();
     }
+
     @Override
     public UsuarioDTO getUsuario(UsuarioDTO usuario) {
         return null;
     }
+
+
 }
+

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Publicacion implements IInteractuar, IPublicacion {
+    private String idVendedor;
     private LocalDate fechaPublicacion;
     private LocalTime horaPublicacion;
     private String descripcion;
@@ -88,5 +89,9 @@ public class Publicacion implements IInteractuar, IPublicacion {
 
     public void setListaMegustas(List<Vendedor> listaMegustas) {
         this.listaMegustas = listaMegustas;
+    }
+
+    public String getIdVendedor() {
+        return idVendedor;
     }
 }

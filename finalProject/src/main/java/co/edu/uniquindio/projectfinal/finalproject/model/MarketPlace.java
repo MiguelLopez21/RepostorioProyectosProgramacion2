@@ -103,4 +103,42 @@ public class MarketPlace implements IInteraccion, ICrudPublicacion {
     public void darMeGustaPublicacion(Vendedor usuario, Publicacion publicacion) {
 
     }
+
+    /**
+     * Metodo para buscar la lista de productos de un vendedor por id
+     * @param id
+     * @return
+     */
+    public List<Producto> getListaProductosVendedor(String id) {
+        List<Producto> productos = new ArrayList<>();
+        for (Vendedor vendedor : listaVendedores){
+            if(vendedor.getIdVendedor().equals(id)){
+                productos = vendedor.getListaProductos();
+            }
+        }
+        return productos;
+    }
+    public List<Vendedor> getListaContactos(String id){
+        List<Vendedor> contactos = new ArrayList<>();
+        for (Vendedor vendedor : listaVendedores){
+            if(vendedor.getIdVendedor().equals(id)){
+                contactos = vendedor.getListaContactos();
+            }
+        }
+        return contactos;
+    }
+    public List<Comentario> getListaComentariosGenerales(String idVendedor){
+        List<Comentario> comentarios = new ArrayList<>();
+        for (Vendedor vendedor : listaVendedores){
+            if(vendedor.getIdVendedor().equals(idVendedor)){
+                for (Publicacion publicacion : vendedor.getMuro().getListaPublicaciones()){
+                    if(publicacion.getIdVendedor().equals(idVendedor)){
+                        comentarios.addAll(publicacion.getListaComentarios());
+                    }
+                }
+            }
+        }
+        return comentarios;
+    }
+    }
 }
