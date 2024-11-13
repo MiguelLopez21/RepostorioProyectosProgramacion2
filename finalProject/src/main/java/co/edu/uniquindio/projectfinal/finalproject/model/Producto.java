@@ -17,9 +17,13 @@ public class Producto implements IProducto {
         this.estado = estado;
         this.precio = precio;
     }
+    public String toStringComposite(){
+        return "Nombre: "+nombre+" Categoria: "+categoria;
+    }
 
     @Override
-    public void mostrarProducto() {
+    public String mostrarProducto() {
+        return toStringComposite();
 
     }
 
@@ -68,4 +72,5 @@ public class Producto implements IProducto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
 }

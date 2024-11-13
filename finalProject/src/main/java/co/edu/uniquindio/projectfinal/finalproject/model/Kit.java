@@ -13,11 +13,11 @@ public class Kit extends Producto implements IProducto {
     }
 
     @Override
-    public void mostrarProducto() {
+    public String mostrarProducto() {
         for (Producto producto : productos) {
-            producto.mostrarProducto();
+            return producto.mostrarProducto();
         }
-
+        return null;
     }
 
     // Método privado para cargar la imagen
