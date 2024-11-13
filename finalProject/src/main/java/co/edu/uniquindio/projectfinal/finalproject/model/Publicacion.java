@@ -17,10 +17,13 @@ public class Publicacion implements IInteractuar, IPublicacion {
     private List<Comentario> listaComentarios;
     private List<Vendedor> listaMegustas;
 
-    public Publicacion(LocalDate fechaPublicacion, LocalTime horaPublicacion, Producto producto,String descripcion) {
+
+
+    public Publicacion(LocalDate fechaPublicacion, LocalTime horaPublicacion, Producto producto, String descripcion, String idVendedor) {
         this.fechaPublicacion = fechaPublicacion;
         this.horaPublicacion = horaPublicacion;
         this.producto = producto;
+        this.idVendedor = idVendedor;
         listaComentarios = new ArrayList<Comentario>();
         this.descripcion = descripcion;
         listaMegustas = new ArrayList<>();
@@ -93,5 +96,8 @@ public class Publicacion implements IInteractuar, IPublicacion {
 
     public String getIdVendedor() {
         return idVendedor;
+    }
+    public void setIdVendedor(String idVendedor) {
+        this.idVendedor = idVendedor;
     }
 }
